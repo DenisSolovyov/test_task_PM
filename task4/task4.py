@@ -1,6 +1,13 @@
-from math import ceil, floor
+import sys
+from math import floor
 
-nums = input()
+file = sys.argv[1]
+
+nums = []
+
+with open(file) as f:
+    for line in f.readlines():
+        nums.append(int(line))
 
 average = floor(sum(nums) / len(nums))
 
